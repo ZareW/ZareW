@@ -1,0 +1,26 @@
+local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
+
+local win = UILib:Window("NTime • Lucky Block BattleGrounds",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
+
+
+A1 = win:Tab("Lucky Blocks")
+
+A1:Button("Get All Tools", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/A0ExxACz",true))()
+end)
+
+A1:Button("Spawn Super Block", function()
+game:GetService("ReplicatedStorage").SpawnSuperBlock:FireServer()
+end)
+
+A1:Button("Spawn Diamond Block", function()
+game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+end)
+
+A1:Button("Spawn Rainbow Block", function()
+game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+end)
+
+A1:Button("Spawn Galaxy Block", function()
+game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+end)
