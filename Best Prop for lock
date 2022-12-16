@@ -38,3 +38,12 @@ wait(0.001)
 _G.Part = "RightLowerLeg"
 end
 wait()
+AUTOPART = true
+while AUTOPART do
+wait(0.001)
+_G.PART = "UpperTorso"
+
+wait(0.01)
+
+_G.PART = "LowerTorso"
+end
