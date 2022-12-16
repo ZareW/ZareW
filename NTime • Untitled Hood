@@ -197,9 +197,6 @@ A8:Button("Exit The Game", function()
 game:Shutdown()
 end)
 
-A8:Textbox("Enter Password",true, function(t)
-
-end)
 ------------------------------------------------------------------------------------------
 
 wait(2)
