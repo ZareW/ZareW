@@ -9,5 +9,5 @@ if game.PlaceId == 2636441885 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Speed%20City",true))()
 end
 if game.PlaceId == 662417684 then
-loadstring(game:HttpGet(" ",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Lucky%20Blocks%20Battlegrounds",true))()
 end
