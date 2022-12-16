@@ -1,49 +1,19 @@
-AutoPred = true
-while AutoPred do
-wait(0.1)
+PROPERTION = true
+while PROPERTION do
+wait()
 _G.PRED = 0.050
-
-wait(0.1)
-
+wait()
 _G.PRED = 0.056
-
-wait(0.1)
-
+wait()
 _G.PRED = 0.053
-
-wait(0.1)
-
+wait()
 _G.PRED = 0.049
-
-wait(0.1)
-
+wait()
 _G.PRED = 0.048
-end
 wait()
-Air = true
-while Air do
-wait(0.001)
-if getClosestPlayerToCursor().Character.Humanoid.Jump == true and getClosestPlayerToCursor().Character.Humanoid.FloorMaterial == Enum.Material.Air then
-
-wait(0.01)
-
- _G.Frame = Vector3.new(0,-8.3,0)
-
-wait(0.001)
-
-_G.PART = "LeftLowerLeg"
-
-wait(0.001)
-
-_G.Part = "RightLowerLeg"
-end
-wait()
-AUTOPART = true
-while AUTOPART do
-wait(0.001)
 _G.PART = "UpperTorso"
-
-wait(0.01)
-
+wait()
 _G.PART = "LowerTorso"
 end
+
+
