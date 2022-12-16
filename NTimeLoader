@@ -1,7 +1,7 @@
 --SKID IF YOU WANT I DONT CARE!
-if game PlaceId == 4623386862 then
+if game.PlaceId == 4623386862 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Piggy",true))()
-if game PlaceId == 9183932460 then
+if game.PlaceId == 9183932460 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Untitled%20Hood",true))()
-if game PlaceId == 2636441885 then
+if game.PlaceId == 2636441885 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Speed%20City",true))()
