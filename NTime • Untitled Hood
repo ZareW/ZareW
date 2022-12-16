@@ -1,7 +1,7 @@
 
 local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
 
-local win = UILib:Window("NTime",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
+local win = UILib:Window("NTime • UntitledHood",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
 
 
 local A4 = win:Tab("AntiAiming")
