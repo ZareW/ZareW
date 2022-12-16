@@ -1,7 +1,10 @@
 --SKID IF YOU WANT I DONT CARE!
 if game.PlaceId == 4623386862 then --PIGGY
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Piggy",true))()
+end
 if game.PlaceId == 9183932460 then --UNTITLED HOOD
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Untitled%20Hood",true))()
+end
 if game.PlaceId == 2636441885 then --SEPED CITY
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Speed%20City",true))()
+end
