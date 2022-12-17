@@ -1,0 +1,108 @@
+
+local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
+
+local win = UILib:Window("NTime • Field Trip Z",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
+
+A1 = win:Tab("LocalPlayer")
+A2 = win:Tab("All Players")
+A5 = win:Tab("Others")
+
+A1:Toggle("Godmode",false, function(t)
+GodP = t
+while GodP do
+wait()
+local args = {
+    [1] = "TAKE_DAMAGE_PLAYER",
+    [2] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(unpack(args))
+end
+end)
+
+A1:Textbox("Health",true, function(t)
+local args = {
+    [1] = "TAKE_DAMAGE_PLAYER",
+    [2] = -t
+}
+
+game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(unpack(args))
+end)
+
+A2:Toggle("Godmode All",false, function(t)
+God = t
+while God do
+wait()
+pcall(
+        function()
+            for i, v in pairs(game.Players:GetPlayers()) do
+                if v.Name ~= game:GetService("Players").LocalPlayer then
+                    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(
+                          "HEAL_PLAYER",
+                       v,
+                        999
+                     )
+                end
+            end
+        end
+    )
+end
+end)
+
+A2:Button("Kill All", function()
+pcall(
+        function()
+            for i, v in pairs(game.Players:GetPlayers()) do
+                if v.Name ~= game:GetService("Players").LocalPlayer then
+                    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(
+                          "HEAL_PLAYER",
+                       v,
+                        -150
+                     )
+                end
+            end
+        end
+    )
+end)
+
+A2:Button("Revive All", function()
+pcall(
+        function()
+            for i, v in pairs(game.Players:GetPlayers()) do
+                if v.Name ~= game:GetService("Players").LocalPlayer then
+                    game:GetService("ReplicatedStorage").NetworkEvents.RemoteFunction:InvokeServer(
+                          "REVIVE_PLAYER",
+                       v
+                     )
+                end
+            end
+        end
+    )
+end)
+
+A5:Button("Get All Dr.Zero Plans", function()
+plans = true
+while plans do
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Interactions.DrZeroPlans.SecretFiles.Part.position)
+wait()
+if fireclickdetector then
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("ClickDetector") then
+				fireclickdetector(v)
+			end
+		end
+end
+wait(5)
+plans = false
+end
+end)
+
+A5:Button("Get Gold Donut", function()
+local args = {
+    [1] = "GIVE_DAVE_DONUT"
+}
+
+game:GetService("ReplicatedStorage").NetworkEvents.RemoteEvent:FireServer(unpack(args))
+end)
+
