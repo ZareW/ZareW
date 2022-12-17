@@ -11,3 +11,6 @@ end
 if game.PlaceId == 662417684 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Lucky%20Blocks%20Battlegrounds",true))()
 end
+if game.PlaceId == 4954096313 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Field%20Trip%20Z",true))()
+end
