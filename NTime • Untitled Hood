@@ -137,22 +137,6 @@ A4:Button("KavoAA[N]", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/Wk5mk1RW",true))()
 end)
 
-A4:Toggle("AntiAim",false, function(t)
-getgenv().SemiRageAA = t
-getgenv().BlatantAA = t
-
-loadstring(game:HttpGet("https://pastebin.com/raw/GNQB8iPa",true))()
-end)
-
-A4:Toggle("BlatantAA",false, function(t)
-getgenv().BlatantAA = t
-
-local Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-while getgenv().BlatantAA == true  do
-    task.wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (CFrame.new(Position) + Vector3.new(math.random(-15, 15), math.random(-15, 15), math.random(-15, 15))) * CFrame.Angles(math.rad(math.random(-180, 180)), math.rad(math.random(-180, 180)), math.rad(math.random(-180, 180)))
-end
-end)
 ------------------------------------------------------------------------------------------
 A5:Button("Loot AirDrop", function()
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -177,6 +161,31 @@ wait(0.0000001)
 p1.CFrame = pos
 
 end)
+
+A5:Button("Armor", function()
+UILib:Notification("Keybind Is", "k", "Ok")    
+wait()
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+ if KeyPressed == "k" then
+p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local pos = p1.CFrame
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").Ignored.Shop["[Medium Armor] - $1000"].Head.position)
+wait()
+if fireclickdetector then
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("ClickDetector") then
+				fireclickdetector(v)
+			end
+		end
+end
+wait()
+p1.CFrame = pos
+end
+
+end)
+end)
+
 ------------------------------------------------------------------------------------------
 A6:Toggle("Auto Stomp",false, function(t)
 AutoStomp = t
@@ -213,8 +222,8 @@ game:Shutdown()
 end)
 
 ------------------------------------------------------------------------------------------
---HI
-wait(2)
+--HI IF YOUR HERE YOUR OFFICIAL SKID!
+wait(0)
 
 UILib:Notification("Notification", "Keybind Is V", "Okay")    
 
