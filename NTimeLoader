@@ -1,4 +1,5 @@
 --SKID IF YOU WANT I DONT CARE!
+local plr = game.Players.LocalPlayer
 if game.PlaceId == 4623386862 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Piggy",true))()
 end
