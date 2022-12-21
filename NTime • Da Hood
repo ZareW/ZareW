@@ -1,0 +1,149 @@
+
+local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
+
+local win = UILib:Window("NTime • Da Hood",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
+
+local A2 = win:Tab("Weapons")
+local A3 = win:Tab("Movement")
+local A4 = win:Tab("Target")
+local A5 = win:Tab("AntiAim")
+local A6 = win:Tab("Aiming")
+--
+
+--
+A2:Textbox("Reach(Scale)",true, function(t)
+for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren()) do
+		if v:isA("Tool") then
+			local a = Instance.new("SelectionBox",v.Handle)
+			v.Handle.Massless = true
+			v.Handle.Transparency = 1
+			a.Adornee = v.Handle
+			v.Handle.Size = Vector3.new(t, t, t)
+			local selectionBox = Instance.new("SelectionBox",v.Handle)
+			selectionBox.Adornee = v.Handle
+			selectionBox.Color3 = Color3.new(0, 0.313725, 0.47451)
+		end
+	end 
+end) 
+--
+A3:Button("Flight(X)", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/gg0LV6a1",true))()
+end)
+
+A3:Button("CFrame(L)", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/HSTMXhrb",true))()
+end)
+
+A3:Button("SpeedTool", function()
+getgenv().Suicide = false
+getgenv().Speed = true
+getgenv().FakeMacro = false
+getgenv().ClickTp = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Allvideo/nukermode/main/Kit%20tools.txt",true))()
+end)
+--
+A4:Textbox("Victim : Can Be Shortened",true, function(t)
+_G.Victim = t
+end)
+
+A4:Toggle("Strafe",false, function(t)
+local player = game.Players.LocalPlayer
+for i,v in pairs(game.Players:GetChildren()) do
+if (string.sub(string.lower(v.Name),1,string.len(_G.Victim))) == string.lower(_G.Victim) then
+_G.Victim = v.Name
+end
+end
+getgenv().u = t
+
+local target = _G.Victim
+
+while getgenv().u == true do
+    task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[target].Character.HumanoidRootPart.CFrame * CFrame.new(0, 14, 0)
+end 
+end)
+
+
+A4:Button("Teleport To", function()
+local player = game.Players.LocalPlayer
+for i,v in pairs(game.Players:GetChildren()) do
+if (string.sub(string.lower(v.Name),1,string.len(_G.Victim))) == string.lower(_G.Victim) then
+_G.Victim = v.Name
+end
+end
+local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = _G.Victim
+
+p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+end)
+
+A4:Button("Bag", function()
+p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local pos = p1.CFrame
+local Plr = game.Players.LocalPlayer
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-314.580566, 51.1788902, -727.484558)
+            wait()
+            fireclickdetector(workspace.Ignored.Shop["[BrownBag] - $25"].ClickDetector)
+        until Plr.Backpack:FindFirstChild("[BrownBag]")
+        Plr.Backpack["[BrownBag]"].Parent = Plr.Character
+                if Plr.Character:FindFirstChild("[BrownBag]") then
+local player = game.Players.LocalPlayer
+for i,v in pairs(game.Players:GetChildren()) do
+if (string.sub(string.lower(v.Name),1,string.len(_G.Victim))) == string.lower(_G.Victim) then
+_G.Victim = v.Name
+end
+end
+local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = _G.Victim
+
+p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+wait()
+                    Plr.Character["[BrownBag]"]:Activate()
+    wait()
+p1.CFrame = Pos             
+end)
+--
+A5:Button("Oblivity Desync[T]", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/QbasXrpg",true))()
+end)
+
+A5:Button("UnderAntiLock[Y]", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/pKFm66Ev",true))()
+end)
+
+A5:Button("KavoAA[N]", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/Wk5mk1RW",true))()
+end)
+--
+A6:Button("Aim", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/u7gyhrMf",true))()
+end)
+
+A6:Textbox("Key",true, function(t)
+_G.Key = t
+end)
+
+A6:Textbox("Prediction",true, function(t)
+_G.Prediction = t
+end)
+
+A6:Dropdown("AimPart",{"Head", "UpperTorso", "HumanoidRootPart", "LowerTorso", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg",  "LeftUpperLeg", "RightLowerLeg", "RightFoot",  "RightUpperLeg"}, function(t)
+_G.Part = t
+end)
+
+A6:Button("AntiLock Resolver", function()
+local RunService = game:GetService("RunService")
+
+RunService.Heartbeat:Connect(function()
+    pcall(function()
+        for i,v in pairs(game.Players:GetChildren()) do
+            if v.Name ~= game.Players.LocalPlayer.Name then
+                local hrp = v.Character.HumanoidRootPart
+                hrp.Velocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)    
+                hrp.AssemblyLinearVelocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Z)   
+            end
+        end
+    end)
+end)
+end)
+--
