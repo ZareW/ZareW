@@ -1,3 +1,13 @@
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local Notify = AkaliNotif.Notify;
+Notify({
+Description = game.Players.LocalPlayer.DisplayName;
+Title = "Welcome To The NTime!";
+Duration = 10;
+});
+
+wait()
+
 local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
 
 local win = UILib:Window("NTime • SpeedCity",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
