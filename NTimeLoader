@@ -17,3 +17,6 @@ end
 if game.PlaceId == 2788229376 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZareW/ZareW/main/NTime%20%E2%80%A2%20Da%20Hood",true))()
 end
+
+wait()
+UILib:Notification("Keybind Is", "V", "Okay")
