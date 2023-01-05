@@ -46,3 +46,34 @@ for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren()) d
 		end
 	end 
 end)
+
+A1:Button("Получить Кнопку Кражи Денег",function()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Нажмм На меня!"
+tool.Activated:connect(function()
+p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local pos = p1.CFrame
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Kazeka Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Sarukobi Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Uzumonki Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Otsutsushi Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Hotate Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Uchika Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Sonju Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Hyago Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons.Akatsuke.Essentials.Giver.position)
+wait()
+p1.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+end)
