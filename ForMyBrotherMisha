@@ -1,0 +1,29 @@
+
+local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
+
+local win = UILib:Window("NTime",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
+
+A1 = win:Tab("Для Чебака")
+
+A1:Button("Забрать Деньги У Других",function()
+p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local pos = p1.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Kazeka Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Sarukobi Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Uzumonki Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Otsutsushi Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Hotate Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Uchika Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Sonju Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Hyago Clan"].Essentials.Giver.position)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons.Akatsuke.Essentials.Giver.position)
+p1.CFrame = pos
+end)
