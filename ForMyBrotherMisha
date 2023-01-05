@@ -3,11 +3,12 @@ local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldo
 
 local win = UILib:Window("NTime",Color3.fromRGB(255, 255, 255), Enum.KeyCode.V)
 
-A1 = win:Tab("Для Чебака")
+A1 = win:Tab("Ninja Tyccon")
 
 A1:Button("Забрать Деньги У Других",function()
 p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local pos = p1.CFrame
+wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Kazeka Clan"].Essentials.Giver.position)
 wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Sarukobi Clan"].Essentials.Giver.position)
@@ -25,5 +26,23 @@ wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons["Hyago Clan"].Essentials.Giver.position)
 wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons.Akatsuke.Essentials.Giver.position)
+wait()
 p1.CFrame = pos
+end)
+
+A1:Textbox("Расширить Хитбокс | Укажите Сумму",true,function(t)
+_G.S = t
+
+for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren()) do
+		if v:isA("Tool") then
+			local a = Instance.new("SelectionBox",v.Handle)
+			v.Handle.Massless = true
+			v.Handle.Transparency = 1
+			a.Adornee = v.Handle
+			v.Handle.Size = Vector3.new(_G.S, _G.S, _G.S)
+			local selectionBox = Instance.new("SelectionBox",v.Handle)
+			selectionBox.Adornee = v.Handle
+			selectionBox.Color3 = Color3.new(170,0,170)
+		end
+	end 
 end)
